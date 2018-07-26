@@ -9,11 +9,17 @@
          If you take care of these two things, Flask-WTF does the rest for you.-->
     <p>
         {{form.username.label}}<br>
-        {{form.username(size=32)}}
+        {{form.username(size=32)}}<br>
+        {% for error in form.username.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
     </p>
     <p>
         {{form.password.label}}<br>
-        {{form.password(size=32)}}
+        {{form.password(size=32)}}<br>
+        {% for error in form.username.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
     </p>
     <p>{{form.remember_me.lebel}}{{form.remember_me()}}</p>
     <p>{{form.submit()}}</p>
