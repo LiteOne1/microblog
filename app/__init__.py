@@ -9,4 +9,4 @@ app.config.from_object(Config)#import configuration from config.py
 db = SQLAlchemy(app)#database related variables
 migrate = Migrate(app, db)
 
-from app import routes
+from app import routes, models
